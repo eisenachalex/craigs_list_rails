@@ -1,2 +1,9 @@
 <h1>Welcome back, <%= @user.email %></h1>
-<%= @user %> 
+<% @posts.each do |post| %>
+  <%= post.title %><br>
+  <%= post.description %><br>
+  <%= post.price %><br>
+<% end %><br> 
+
+<%= link_to "New Post", new_user_post_path(@user) %><br>
+<%= link_to "Logout", welcome_index_path %>

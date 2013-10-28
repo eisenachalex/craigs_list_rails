@@ -1,7 +1,12 @@
 CraigsListRails::Application.routes.draw do
   get "welcome/index"
 
-  resources :users
+  resources :users do
+    resources :posts
+  end
+
+
+
   get '/login' => "sessions#login"
   post '/login' => "sessions#create"
   # The priority is based upon order of creation:
