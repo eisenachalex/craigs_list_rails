@@ -1,0 +1,22 @@
+<h1>Create a new post</h1>
+  <%= form_for :post, url: user_posts_path do |f| %>
+
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %><br>
+    </p>
+
+    <p>
+      <%= f.label :description %><br>
+      <%= f.text_field :description %><br>
+    </p>
+
+    <p>
+      <%= f.label :price %><br>
+      <%= f.text_field :price %><br>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
